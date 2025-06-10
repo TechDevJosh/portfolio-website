@@ -1,4 +1,4 @@
-import Navbar from '@/components/Navbar'
+import Navbar from '@/components/Navbar-backup';
 
 export default function Projects() {
   return (
@@ -14,5 +14,5 @@ export default function Projects() {
         </ul>
       </main>
     </>
-  )
+  );
 }

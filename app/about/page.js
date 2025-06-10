@@ -1,4 +1,4 @@
-import Navbar from '@/components/Navbar'
+import Navbar from '@/components/Navbar-backup';
 
 export default function About() {
   return (
@@ -19,16 +19,19 @@ export default function About() {
           <div>
             <h2 className="text-4xl font-bold text-teal-700 mb-6">About Me</h2>
             <p className="text-gray-700 mb-4">
-              I'm a results-driven Digital Transformation Specialist with over 5 years of experience spanning real estate,
-              hospitality, and cutting-edge AI applications. My passion lies in leveraging technology to solve real-world
-              business challenges.
+              I'm a results-driven Digital Transformation Specialist with over 5
+              years of experience spanning real estate, hospitality, and
+              cutting-edge AI applications. My passion lies in leveraging
+              technology to solve real-world business challenges.
             </p>
             <p className="text-gray-700 mb-6">
-              I have a proven track record of generating PHP 40M+ in sales revenue for clients, significantly reducing
-              operational costs (by up to 50% in some cases), and implementing practical AI solutions that tangibly
-              enhance business operations. I combine strategic thinking with hands-on technical skills in Python, AI
-              integration, and digital marketing to deliver measurable results—all while championing ethical leadership
-              in remote-work environments.
+              I have a proven track record of generating PHP 40M+ in sales
+              revenue for clients, significantly reducing operational costs (by
+              up to 50% in some cases), and implementing practical AI solutions
+              that tangibly enhance business operations. I combine strategic
+              thinking with hands-on technical skills in Python, AI integration,
+              and digital marketing to deliver measurable results—all while
+              championing ethical leadership in remote-work environments.
             </p>
             <a
               href="/projects"
@@ -40,5 +43,5 @@ export default function About() {
         </div>
       </main>
     </>
-  )
+  );
 }
