@@ -10,7 +10,10 @@ const nextConfig = {
       },
     ],
   },
+  webpack(config) {
+    config.resolve.alias['@'] = new URL('.', import.meta.url).pathname;
+    return config;
+  },
 };
 
-// Use 'export default' for .mjs files
 export default nextConfig;
