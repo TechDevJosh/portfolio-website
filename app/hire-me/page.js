@@ -13,7 +13,7 @@ export default function HireMePage() {
       <main className="pt-24 pb-20">
         <section className="container mx-auto px-6 text-center max-w-4xl">
           <h1 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
-            Let's Discuss{' '}
+            Let&apos;s Discuss{' '}
             <span className="bg-gradient-to-r from-teal-400 to-lime-400 text-transparent bg-clip-text">
               Your Project
             </span>

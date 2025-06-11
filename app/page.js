@@ -67,12 +67,11 @@ export default function Home() {
             landing pages to full applications that actually solve your problems
             and grow with your business.
           </p>
-          {/* ----- BUTTON TEXT UPDATED HERE ----- */}
           <Link
             href="/hire-me"
             className="inline-block bg-teal-600 text-white text-lg font-bold px-8 py-4 rounded-full hover:bg-teal-700 transition"
           >
-            Let's Build Your Website
+            Let&apos;s Build Your Website
           </Link>
         </div>
       </main>
@@ -101,14 +100,14 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-center mb-10">ABOUT</h2>
           <div className="text-gray-300 space-y-6 text-lg">
             <p>
-              I'm Josiah Manzano — a full-stack developer, strategist, and solo
-              founder behind a lean, AI-powered web agency. Based in Subic,
+              I&apos;m Josiah Manzano — a full-stack developer, strategist, and
+              solo founder behind a lean, AI-powered web agency. Based in Subic,
               Philippines, I design and build performant websites and web apps
               that solve real business problems.
             </p>
             <p>
-              My journey into tech didn’t begin in a classroom. I taught myself
-              how to code, debug, deploy, and scale projects by combining
+              My journey into tech didn&apos;t begin in a classroom. I taught
+              myself how to code, debug, deploy, and scale projects by combining
               relentless curiosity with the guidance of cutting-edge AI. From
               managing hospitality operations to automating payroll systems,
               I’ve applied technology where it matters most—on the ground, with

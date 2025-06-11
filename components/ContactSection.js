@@ -43,9 +43,9 @@ export default function ContactSection() {
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-3xl font-bold mb-4">Connect With Me</h2>
         <p className="text-gray-400 mb-8 max-w-xl mx-auto">
-          I'm always open to discussing new projects, creative ideas, or
-          opportunities to be part of your vision. Reach out and let's start a
-          conversation.
+          I&apos;m always open to discussing new projects, creative ideas, or
+          opportunities to be part of your vision. Reach out and let&apos;s
+          start a conversation.
         </p>
         <div className="flex justify-center items-center gap-8">
           <a
