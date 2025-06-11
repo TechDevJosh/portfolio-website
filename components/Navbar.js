@@ -1,55 +1,72 @@
-// components/Navbar.js
-
 import Link from 'next/link';
-import Image from 'next/image'; // Import the Image component
+import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
+  const pathname = usePathname();
+
+  const linkBaseClass = 'text-sm font-medium transition duration-200';
+  const inactiveClass = 'text-white/80 hover:text-white';
+  const activeClass = 'text-white';
+
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800 z-50">
+    <nav className="fixed top-0 left-0 right-0 bg-[#0e1525]/95 backdrop-blur-md border-b border-white/10 z-50">
       <div className="container mx-auto px-6 py-3">
-        {' '}
-        {/* Adjusted padding for image logo */}
         <div className="flex items-center justify-between">
-          {/* Logo/Brand -- Updated to use your image */}
+          {/* Logo */}
           <Link href="/#home" aria-label="Return to homepage">
             <Image
-              src="/weblitzstack logo.png" // This points to your file in the /public folder
+              src="/weblitzstack logo.png"
               alt="Weblitzstack Logo"
-              width={160} // IMPORTANT: Adjust to your logo's actual width
-              height={40} // IMPORTANT: Adjust to your logo's actual height
-              priority // Helps load the logo faster
+              width={160}
+              height={40}
+              priority
             />
           </Link>
 
-          {/* Navigation Links */}
+          {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-8">
             <Link
               href="/#about"
-              className="text-gray-300 hover:text-teal-400 transition"
+              className={`${linkBaseClass} ${
+                pathname === '/#about' ? activeClass : inactiveClass
+              }`}
             >
               About
             </Link>
             <Link
               href="/#work"
-              className="text-gray-300 hover:text-teal-400 transition"
+              className={`${linkBaseClass} ${
+                pathname === '/#work' ? activeClass : inactiveClass
+              }`}
             >
               Work
             </Link>
             <Link
+              href="/blog"
+              className={`${linkBaseClass} ${
+                pathname.startsWith('/blog') ? activeClass : inactiveClass
+              }`}
+            >
+              Blog
+            </Link>
+            <Link
               href="/#contact"
-              className="text-gray-300 hover:text-teal-400 transition"
+              className={`${linkBaseClass} ${
+                pathname === '/#contact' ? activeClass : inactiveClass
+              }`}
             >
               Contact
             </Link>
             <Link
               href="/hire-me"
-              className="bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-700 transition font-semibold"
+              className="bg-teal-500 hover:bg-teal-600 text-white px-4 py-2 rounded-md font-semibold transition"
             >
               Hire Me
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button (unstyled for now) */}
           <div className="md:hidden">
             <button className="text-gray-300 hover:text-white">
               <svg

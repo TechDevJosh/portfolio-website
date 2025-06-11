@@ -1,13 +1,21 @@
-// app/layout.js
+'use client';
 
-import './globals.css';
+import Navbar from '@/components/Navbar';
+import { usePathname } from 'next/navigation';
+import './globals.css'; // ⬅️ This line is MISSING!
 
 export default function RootLayout({ children }) {
+  const pathname = usePathname();
+  const showNavbar = !(
+    pathname?.startsWith('/blog/') && pathname.split('/').length > 2
+  );
+
   return (
     <html lang="en">
-      <head />
-      {/* All extra classes have been removed to ensure default browser scrolling */}
-      <body>{children}</body>
+      <body className="bg-[#0d1117] text-white">
+        {showNavbar && <Navbar />}
+        <main>{children}</main>
+      </body>
     </html>
   );
 }
