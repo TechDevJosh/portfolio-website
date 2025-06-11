@@ -2,7 +2,8 @@
 
 const TestimonialCard = ({ quote, author, title }) => (
   <div className="bg-gray-900 p-8 rounded-lg border border-gray-700">
-    <p className="text-gray-300 italic mb-6">"{quote}"</p>
+    // This is the corrected line
+    <p className="text-gray-300 italic mb-6">&quot;{quote}&quot;</p>
     <div>
       <p className="font-bold text-white">{author}</p>
       <p className="text-teal-400 text-sm">{title}</p>
