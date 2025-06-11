@@ -1,4 +1,4 @@
-import Navbar from '@/components/Navbar-backup';
+import Navbar from '@/components/Navbar';
 
 export default function Projects() {
   return (
