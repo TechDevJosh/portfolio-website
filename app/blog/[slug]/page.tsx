@@ -44,7 +44,7 @@ export default async function BlogPost({
           href="/blog"
           className="mt-12 inline-block text-cyan-400 hover:underline font-medium"
         >
-          ← Back to Blog Page
+          ← Back to Blog Menu Page
         </Link>
       </div>
     </div>
