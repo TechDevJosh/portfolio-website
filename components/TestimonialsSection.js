@@ -1,8 +1,5 @@
-// components/TestimonialsSection.js
-
 const TestimonialCard = ({ quote, author, title }) => (
   <div className="bg-gray-900 p-8 rounded-lg border border-gray-700">
-    // This is the corrected line
     <p className="text-gray-300 italic mb-6">&quot;{quote}&quot;</p>
     <div>
       <p className="font-bold text-white">{author}</p>
