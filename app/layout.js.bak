@@ -1,7 +1,7 @@
 'use client';
 
 import Navbar from '@/components/Navbar';
-import { usePathname } from  'napos;next/navigation';
+import { useRouter } from 'next/navigation';
 import './globals.css'; // ⬅️ This line is MISSING!
 
 export default function RootLayout({ children }) {

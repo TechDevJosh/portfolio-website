@@ -1,5 +1,5 @@
 import Navbar from '@/components/Navbar';
-import Image from  'napos;next/image';
+import Image from  'next/image';
 
 export default function About() {
   return (
@@ -22,7 +22,7 @@ export default function About() {
           <div>
             <h2 className="text-4xl font-bold text-teal-700 mb-6">About Me</h2>
             <p className="text-gray-700 mb-4">
-              I&apos;m a results-driven Digital Transformation Specialist with
+              Im a results-driven Digital Transformation Specialist with
               over 5 years of experience spanning real estate, hospitality, and
               cutting-edge AI applications. My passion lies in leveraging
               technology to solve real-world business challenges.

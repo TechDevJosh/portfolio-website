@@ -1,14 +1,14 @@
 'use client';
 import Link from 'next/link';
 import Image from 'next/image';
-import { usePathname } from 'napos;next/navigation';
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
   const pathname = usePathname();
 
-  const linkBaseClass = 'tapos;text-sm font-medium transition duration-200';
-  const inactiveClass = 'tapos;text-white/80 hover:text-white';
-  const activeClass = 'tapos;text-white';
+  const linkBaseClass = 'ttext-sm font-medium transition duration-200';
+  const inactiveClass = 'ttext-white/80 hover:text-white';
+  const activeClass = 'ttext-white';
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-[#0e1525]/95 backdrop-blur-md border-b border-white/10 z-50">

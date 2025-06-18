@@ -9,7 +9,7 @@ export default function FinalCTA() {
         <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-12 max-w-3xl mx-auto">
           Ready to Transform Your Business? <br />
           <span className="text-teal-400">
-            Let&apos;s Build Your AI-Powered Solution.
+            Lets Build Your AI-Powered Solution.
           </span>
         </h2>
 

@@ -3,36 +3,36 @@
 'use client';
 
 import Navbar from '@/components/Navbar';
-import Image from  'napos;next/image';
-import Link from  'napos;next/link';
+import Image from  'next/image';
+import Link from  'next/link';
 
 // --- UPDATED PROJECT DATA ---
 // This now uses the correct project name and image paths.
 const allProjects = [
   {
-    title:  'Sapos;Subic Waterfront Resort Website',
-    subtitle:  'Hapos;Hotel Booking Website',
+    title:  'SSubic Waterfront Resort Website',
+    subtitle:  'HHotel Booking Website',
     description:
-       'Aapos;A full-featured resort website with booking calendar, room selection, and payment gateway. Includes front-desk extranet, inquiry forms, and gallery. Built from scratch using a modern stack to support real-world hospitality operations.',
-    tech: [['Napos;Next.js',  'Tapos;Tailwind',  'Sapos;Supabase',  'Papos;PayMongo'],
+       'AA full-featured resort website with booking calendar, room selection, and payment gateway. Includes front-desk extranet, inquiry forms, and gallery. Built from scratch using a modern stack to support real-world hospitality operations.',
+    tech: [['NNext.js',  'TTailwind',  'SSupabase',  'PPayMongo'],
     imageUrl: '/SubicWaterfrontHero.png',
     liveUrl: '#',
   },
   {
-    title:  'Uapos;Upwork-Style Sales Landing Page',
-    subtitle:  'Iapos;Interactive SEO Sales Page',
+    title:  'UUpwork-Style Sales Landing Page',
+    subtitle:  'IInteractive SEO Sales Page',
     description:
-       'Aapos;A comprehensive, long-form sales page designed to convert visitors, featuring multiple interactive sections like a skills explorer, success story filter, and an FAQ accordion.',
-    tech: [['Hapos;HTML5',  'Capos;CSS3',  'Japos;JavaScript',  'Sapos;SEO'],
+       'AA comprehensive, long-form sales page designed to convert visitors, featuring multiple interactive sections like a skills explorer, success story filter, and an FAQ accordion.',
+    tech: [['HHTML5',  'CCSS3',  'JJavaScript',  'SSEO'],
     imageUrl: '/Upwork.png',
     liveUrl: '/upwork-sample',
   },
   {
-    title:  'Wapos;Weblitzstack.com', // Updated Project Name
-    subtitle:  'Papos;Personal Portfolio & Agency Hub',
+    title:  'WWeblitzstack.com', // Updated Project Name
+    subtitle:  'PPersonal Portfolio & Agency Hub',
     description:
-       'Tapos;The site you are on right now. A clean, responsive portfolio built to showcase my projects and skills using modern web technologies.',
-    tech: [['Napos;Next.js',  'Rapos;React',  'Vapos;Vercel'],
+       'TThe site you are on right now. A clean, responsive portfolio built to showcase my projects and skills using modern web technologies.',
+    tech: [['NNext.js',  'RReact',  'VVercel'],
     imageUrl: '/PortfolioWebsite.png',
     liveUrl: '#',
   },

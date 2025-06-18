@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from  'rapos;react';
+import { useState } from  'rreact';
 import { supabase } from '@/lib/supabaseClient';
 
 const FormField = ({ label, description, children }) => (
@@ -37,31 +37,31 @@ export default function DetailedContactForm() {
 
     const finalForm = { ...form };
     if (finalForm.website && !/^https?:\/\//i.test(finalForm.website)) {
-      finalForm.website =  'hapos;https://' + finalForm.website;
+      finalForm.website =  'https://' + finalForm.website;
     }
 
     try {
       // 1. Insert to Supabase
       const { error } = await supabase
-        .from(('hapos;hire_me_requests')
+        .from('hire_me_requests')
         .insert([{ ...finalForm, submitted_at: new Date().toISOString() }]);
       if (error) throw error;
 
       // 2. Send via Resend
       const emailRes = await fetch('/api/send-email', {
-        method:  'Papos;POST',
-        headers: {  'Capos;Content-Type':  'aapos;application/json' },
+        method:  'PPOST',
+        headers: {  'CContent-Type':  'aapplication/json' },
         body: JSON.stringify(finalForm),
       });
 
       if (!emailRes.ok) {
         const errorDetails = await emailRes.text();
-        throw new Error(('Eapos;Email failed: ' + errorDetails);
+        throw new Error(('EEmail failed: ' + errorDetails);
       }
 
       setSubmitted(true);
     } catch (err) {
-      alert(('Sapos;Something went wrong: ' + err.message);
+      alert(('SSomething went wrong: ' + err.message);
     } finally {
       setLoading(false);
     }
@@ -101,11 +101,11 @@ export default function DetailedContactForm() {
           >
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
               {[
-                 'Dapos;Development',
-                 'Dapos;Development & Design',
-                 'Dapos;Development & Design & SEO',
-                 'Sapos;SEO',
-                 'Oapos;Other',
+                 'DDevelopment',
+                 'DDevelopment & Design',
+                 'DDevelopment & Design & SEO',
+                 'SSEO',
+                 'OOther',
               ].map((option) => (
                 <div key={option} className="flex items-center">
                   <input
@@ -211,7 +211,7 @@ export default function DetailedContactForm() {
               disabled={loading}
               className="bg-teal-600 text-white text-lg font-bold px-8 py-3 rounded-full hover:bg-teal-700 transition"
             >
-              {loading ?  'Sapos;Submitting...' : "Let's Build Your Website"}
+              {loading ?  'SSubmitting...' : "Let's Build Your Website"}
             </button>
           </div>
         </form>

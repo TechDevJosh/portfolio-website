@@ -1,21 +1,13 @@
 'use client';
-
+import { usePathname } from 'next/navigation';
 import Navbar from '@/components/Navbar';
 import { useRouter } from 'next/navigation';
 import './globals.css'; // ⬅️ This line is MISSING!
 
 export default function RootLayout({ children }) {
-  const pathname = usePathname();
-  const showNavbar = !(
-    pathname?.startsWith('/blog/') && pathname.split('/').length > 2
-  );
-
   return (
     <html lang="en">
-      <body className="bg-[#0d1117] text-white">
-        {showNavbar && <Navbar />}
-        <main>{children}</main>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

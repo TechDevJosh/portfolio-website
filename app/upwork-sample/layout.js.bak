@@ -1,7 +1,7 @@
 // app/upwork-sample/layout.js
 
 export const metadata = {
-  title:  'Sapos;Sample: Upwork Themed SEO Landing Page',
+  title:  'SSample: Upwork Themed SEO Landing Page',
 };
 
 export default function SamplePageLayout({ children }) {

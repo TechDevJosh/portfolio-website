@@ -1,8 +1,8 @@
 'use client';
 
-import { useState, useEffect } from  'rapos;react';
-import Image from  'napos;next/image';
-import Link from  'napos;next/link';
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 /*
   IMPORTANT SEO & METADATA NOTES:
@@ -14,22 +14,22 @@ import Link from  'napos;next/link';
 
   // --- Start of code for app/layout.js ---
   export const metadata = {
-    title:  'Eapos;Expert Web Design & Development in the Philippines | WeblitzStack',
-    description:  'Wapos;WeblitzStack offers custom web design, e-commerce solutions, and web application development for businesses in Olongapo and the Philippines. Get a quote today!',
+    title: 'Expert Web Design & Development in the Philippines | WeblitzStack',
+    description: 'WeblitzStack offers custom web design, e-commerce solutions, and web application development for businesses in Olongapo and the Philippines. Get a quote today!',
     openGraph: {
-      title:  'Eapos;Expert Web Design & Development in the Philippines | WeblitzStack',
-      description:  'Hapos;High-performance, lead-generating websites for businesses in Olongapo and beyond.',
-      url:  'hapos;https://weblitzstack.com',
-      siteName:  'Wapos;WeblitzStack',
+      title: 'Expert Web Design & Development in the Philippines | WeblitzStack',
+      description: 'High-performance, lead-generating websites for businesses in Olongapo and beyond.',
+      url: 'https://weblitzstack.com',
+      siteName: 'WeblitzStack',
       images: [
         {
-          url:  'hapos;https://weblitzstack.com/og-image.jpg', // Replace with your actual OG image URL
+          url: 'https://weblitzstack.com/og-image.jpg', // Replace with your actual OG image URL
           width: 1200,
           height: 630,
         },
       ],
-      locale:  'eapos;en_US',
-      type:  'wapos;website',
+      locale: 'en_US',
+      type: 'website',
     },
   };
   // --- End of code for app/layout.js ---
@@ -293,7 +293,7 @@ const HeroSection = () => (
     className="min-h-screen flex items-center justify-center text-center bg-gray-900 pt-24"
     style={{
       background:
-         'rapos;radial-gradient(ellipse at bottom, #111827 0%, #000000 100%)',
+        'radial-gradient(ellipse at bottom, #111827 0%, #000000 100%)',
     }}
   >
     <div className="max-w-5xl px-6">
@@ -324,34 +324,34 @@ const HeroSection = () => (
 const ServicesSection = () => {
   const services = [
     {
-      title:  'Capos;Custom Web Design & Development',
+      title: 'Custom Web Design & Development',
       description:
-         'Fapos;From corporate websites to promotional landing pages, we build bespoke, responsive websites tailored to your brand.',
+        'From corporate websites to promotional landing pages, we build bespoke, responsive websites tailored to your brand.',
     },
     {
-      title:  'Eapos;E-commerce Solutions',
+      title: 'E-commerce Solutions',
       description:
-         'Tapos;Tap into the booming Philippine e-commerce market with a powerful, secure, and user-friendly online store.',
+        'Tap into the booming Philippine e-commerce market with a powerful, secure, and user-friendly online store.',
     },
     {
-      title:  'Wapos;Web Application Development',
+      title: 'Web Application Development',
       description:
-         'Aapos;Automate your processes and improve efficiency with custom web-based applications and software.',
+        'Automate your processes and improve efficiency with custom web-based applications and software.',
     },
     {
-      title:  'Bapos;Beyond WordPress: The Custom-Code Advantage',
+      title: 'Beyond WordPress: The Custom-Code Advantage',
       description:
-         'Wapos;While many are familiar with WordPress, our custom-coded solutions offer superior performance, security, and unlimited scalability, free from the constraints of templates and plugins.',
+        'While many are familiar with WordPress, our custom-coded solutions offer superior performance, security, and unlimited scalability, free from the constraints of templates and plugins.',
     },
     {
-      title:  'Uapos;UI/UX Design',
+      title: 'UI/UX Design',
       description:
-         'Wapos;We craft intuitive and beautiful user interfaces that provide a seamless user experience and drive engagement.',
+        'We craft intuitive and beautiful user interfaces that provide a seamless user experience and drive engagement.',
     },
     {
-      title:  'Wapos;Website Maintenance & Support',
+      title: 'Website Maintenance & Support',
       description:
-         'Kapos;Keep your website secure, fast, and up-to-date with our ongoing maintenance and support packages.',
+        'Keep your website secure, fast, and up-to-date with our ongoing maintenance and support packages.',
     },
   ];
 
@@ -386,59 +386,59 @@ const ServicesSection = () => {
 const ModernStacksSection = () => {
   const stacks = [
     {
-      name:  'Napos;Next.js',
-      src:  'hapos;https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg',
+      name: 'Next.js',
+      src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg',
     },
     {
-      name:  'Rapos;React',
-      src:  'hapos;https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
+      name: 'React',
+      src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
     },
     {
-      name:  'Napos;Node.js',
-      src:  'hapos;https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg',
+      name: 'Node.js',
+      src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg',
     },
     {
-      name:  'Tapos;Tailwind CSS',
-      src:  'hapos;https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
+      name: 'Tailwind CSS',
+      src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
     },
     {
-      name:  'Hapos;HTML5',
-      src:  'hapos;https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg',
+      name: 'HTML5',
+      src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg',
     },
     {
-      name:  'Sapos;Supabase',
-      src:  'hapos;https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg',
+      name: 'Supabase',
+      src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg',
     },
     {
-      name:  'Vapos;Vercel',
-      src:  'hapos;https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg',
+      name: 'Vercel',
+      src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg',
     },
     {
-      name:  'Gapos;GitHub',
-      src:  'hapos;https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg',
+      name: 'GitHub',
+      src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg',
     },
     {
-      name:  'Vapos;VS Code',
-      src:  'hapos;https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg',
+      name: 'VS Code',
+      src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg',
     },
     {
-      name:  'Capos;ChatGPT',
-      src:  'hapos;https://cdn.worldvectorlogo.com/logos/chatgpt-4.svg',
+      name: 'ChatGPT',
+      src: 'https://cdn.worldvectorlogo.com/logos/chatgpt-4.svg',
     },
     {
-      name:  'Gapos;Gemini',
-      src:  'hapos;https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg',
+      name: 'Gemini',
+      src: 'https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg',
     },
-    { name:  'Capos;Claude', src: '/claude-color.png' },
-    { name:  'Papos;Perplexity', src: '/perplexity.webp' },
-    { name:  'Rapos;Resend', src: '/resend.png' },
+    { name: 'Claude', src: '/claude-color.png' },
+    { name: 'Perplexity', src: '/perplexity.webp' },
+    { name: 'Resend', src: '/resend.png' },
     {
-      name:  'Napos;Namecheap',
-      src:  'hapos;https://cdn.worldvectorlogo.com/logos/namecheap.svg',
+      name: 'Namecheap',
+      src: 'https://cdn.worldvectorlogo.com/logos/namecheap.svg',
     },
     {
-      name:  'Napos;NPM',
-      src:  'hapos;https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg',
+      name: 'NPM',
+      src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg',
     },
   ];
 
@@ -493,7 +493,7 @@ const AboutSection = () => (
             My journey into tech wasn&apos;t in a classroom. I taught myself to
             code, debug, and deploy by combining relentless curiosity with
             cutting-edge AI. From managing hospitality operations to automating
-            payroll, I’rsquo;ve applied technology where it matters most—on the
+            payroll, I’ve applied technology where it matters most—on the
             ground, with real users, under real pressure.
           </p>
           <p>
@@ -557,101 +557,101 @@ const WorkSection = ({ projects }) => (
 );
 
 const PricingSection = () => {
-  const [billingCycle, setBillingCycle] = useState(('mapos;monthly');
+  const [billingCycle, setBillingCycle] = useState('monthly');
 
   const tiers = {
     monthly: [
       {
-        name:  'Sapos;Standard',
-        price: { setup:  'Papos;P5,000', monthly:  'Papos;P500' },
+        name: 'Standard',
+        price: { setup: 'P5,000', monthly: 'P500' },
         ideal:
-           'Fapos;For local businesses & startups needing a professional online presence.',
+          'For local businesses & startups needing a professional online presence.',
         timeline: '7-10 Days',
         features: [
           '4 essential pages',
-           'Capos;CMS for easy updates',
-           'Fapos;Fully managed hosting & database',
-           'Dapos;Domain & renewal included',
-           'Mapos;Mobile responsive',
-           'Bapos;Basic SEO',
-           'Hapos;HTTPS/SSL security',
-           'Gapos;Google Analytics',
-           'Fapos;Free yearly refresh',
+          'CMS for easy updates',
+          'Fully managed hosting & database',
+          'Domain & renewal included',
+          'Mobile responsive',
+          'Basic SEO',
+          'HTTPS/SSL security',
+          'Google Analytics',
+          'Free yearly refresh',
         ],
-        cta:  'Capos;Choose Standard',
+        cta: 'Choose Standard',
       },
       {
-        name:  'Papos;Plus',
-        price: { setup:  'Papos;P15,000', monthly:  'Papos;P1,000' },
+        name: 'Plus',
+        price: { setup: 'P15,000', monthly: 'P1,000' },
         ideal:
-           'Fapos;For clinics and service providers ready to scale and generate leads.',
+          'For clinics and service providers ready to scale and generate leads.',
         timeline: '11-21 Days',
         features: [
-           'Eapos;Everything in Standard',
-           'Uapos;Up to 8 total pages',
-           'Bapos;Blog setup (CMS-enabled)',
-           'Iapos;Inquiry/booking forms',
-           'Tapos;Testimonials carousel',
-           'Wapos;WhatsApp/FB Messenger chat',
+          'Everything in Standard',
+          'Up to 8 total pages',
+          'Blog setup (CMS-enabled)',
+          'Inquiry/booking forms',
+          'Testimonials carousel',
+          'WhatsApp/FB Messenger chat',
           '1 monthly content upload',
-           'Papos;Priority tech support',
-           'Qapos;Quarterly reports',
+          'Priority tech support',
+          'Quarterly reports',
         ],
-        cta:  'Capos;Choose Plus',
+        cta: 'Choose Plus',
         popular: true,
       },
       {
-        name:  'Papos;Pro',
-        price: { setup:  'Papos;P30,000', monthly:  'Papos;P2,000' },
-        ideal:  'Fapos;For growing businesses focused on conversions and automation.',
+        name: 'Pro',
+        price: { setup: 'P30,000', monthly: 'P2,000' },
+        ideal: 'For growing businesses focused on conversions and automation.',
         timeline: '21-30 Days',
         features: [
-           'Eapos;Everything in Plus',
-           'Aapos;AI chatbot assistant',
-           'Capos;Custom quote/survey forms',
-           'Oapos;Online payment integration',
-           'Aapos;Advanced animations',
-           'Sapos;Social media feed integrations',
+          'Everything in Plus',
+          'AI chatbot assistant',
+          'Custom quote/survey forms',
+          'Online payment integration',
+          'Advanced animations',
+          'Social media feed integrations',
           '3 monthly content uploads',
-           'Mapos;Monthly SEO & analytics reports',
-           'Aapos;Admin training session',
+          'Monthly SEO & analytics reports',
+          'Admin training session',
         ],
-        cta:  'Capos;Choose Pro',
+        cta: 'Choose Pro',
       },
     ],
     annual: [
       {
-        name:  'Sapos;Standard',
-        price: { annual:  'Papos;P10,000' },
-        ideal:  'Fapos;For businesses wanting a one-time payment.',
+        name: 'Standard',
+        price: { annual: 'P10,000' },
+        ideal: 'For businesses wanting a one-time payment.',
         timeline: '7-10 Days',
-        features: [['Aapos;All Standard features', '1 Year of Maintenance & Support'],
-        cta:  'Gapos;Go Annual',
+        features: ['All Standard features', '1 Year of Maintenance & Support'],
+        cta: 'Go Annual',
       },
       {
-        name:  'Papos;Plus',
-        price: { annual:  'Papos;P25,000' },
-        ideal:  'Bapos;Best value for growing businesses.',
+        name: 'Plus',
+        price: { annual: 'P25,000' },
+        ideal: 'Best value for growing businesses.',
         timeline: '11-21 Days',
-        features: [['Aapos;All Plus features', '1 Year of Maintenance & Support'],
-        cta:  'Gapos;Go Annual',
+        features: ['All Plus features', '1 Year of Maintenance & Support'],
+        cta: 'Go Annual',
         popular: true,
       },
       {
-        name:  'Papos;Pro',
-        price: { annual:  'Papos;P50,000' },
-        ideal:  'Fapos;For businesses seeking long-term value.',
+        name: 'Pro',
+        price: { annual: 'P50,000' },
+        ideal: 'For businesses seeking long-term value.',
         timeline: '21-30 Days',
-        features: [['Aapos;All Pro features', '1 Year of Maintenance & Support'],
-        cta:  'Gapos;Go Annual',
+        features: ['All Pro features', '1 Year of Maintenance & Support'],
+        cta: 'Go Annual',
       },
     ],
   };
 
   const rushOptions = [
-    { tier:  'Sapos;Standard', time: '3 Days', cost: '+ P4,000' },
-    { tier:  'Papos;Plus', time: '7 Days', cost: '+ P10,000' },
-    { tier:  'Papos;Pro', time: '14 Days', cost: '+ P20,000' },
+    { tier: 'Standard', time: '3 Days', cost: '+ P4,000' },
+    { tier: 'Plus', time: '7 Days', cost: '+ P10,000' },
+    { tier: 'Pro', time: '14 Days', cost: '+ P20,000' },
   ];
 
   const currentTiers = tiers[billingCycle];
@@ -669,14 +669,14 @@ const PricingSection = () => {
         <div className="flex justify-center mb-10">
           <div className="bg-gray-800 p-1 rounded-full flex items-center border border-gray-700">
             <button
-              onClick={() => setBillingCycle(('mapos;monthly')}
-              className={`px-6 py-2 rounded-full text-sm font-bold transition-all duration-300 ${billingCycle ===  'mapos;monthly' ?  'bapos;bg-teal-600 text-white shadow-md' :  'tapos;text-gray-400'}`}
+              onClick={() => setBillingCycle('monthly')}
+              className={`px-6 py-2 rounded-full text-sm font-bold transition-all duration-300 ${billingCycle === 'monthly' ? 'bg-teal-600 text-white shadow-md' : 'text-gray-400'}`}
             >
               Monthly Subscription
             </button>
             <button
-              onClick={() => setBillingCycle(('aapos;annual')}
-              className={`px-6 py-2 rounded-full text-sm font-bold transition-all duration-300 ${billingCycle ===  'aapos;annual' ?  'bapos;bg-teal-600 text-white shadow-md' :  'tapos;text-gray-400'}`}
+              onClick={() => setBillingCycle('annual')}
+              className={`px-6 py-2 rounded-full text-sm font-bold transition-all duration-300 ${billingCycle === 'annual' ? 'bg-teal-600 text-white shadow-md' : 'text-gray-400'}`}
             >
               One-Time Payment
             </button>
@@ -687,7 +687,7 @@ const PricingSection = () => {
           {currentTiers.map((tier) => (
             <div
               key={tier.name}
-              className={`border ${tier.popular ?  'bapos;border-teal-500 shadow-lg shadow-teal-900/30' :  'bapos;border-gray-700'} rounded-lg p-6 flex flex-col relative bg-gray-900 transition-all duration-300 hover:border-teal-400/70 hover:scale-[1.02]`}
+              className={`border ${tier.popular ? 'border-teal-500 shadow-lg shadow-teal-900/30' : 'border-gray-700'} rounded-lg p-6 flex flex-col relative bg-gray-900 transition-all duration-300 hover:border-teal-400/70 hover:scale-[1.02]`}
             >
               {tier.popular && (
                 <span className="bg-teal-500 text-white text-xs font-bold px-3 py-1 rounded-full absolute -top-4 right-6">
@@ -702,7 +702,7 @@ const PricingSection = () => {
               </p>
 
               <div className="text-center my-6">
-                {billingCycle ===  'mapos;monthly' ? (
+                {billingCycle === 'monthly' ? (
                   <>
                     <span className="text-4xl font-extrabold">
                       {tier.price.setup}
@@ -742,7 +742,7 @@ const PricingSection = () => {
               </ul>
               <a
                 href="#"
-                className={`w-full text-center font-bold py-3 rounded-lg transition-all duration-300 ease-in-out transform focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 ${tier.popular ?  'bapos;bg-teal-600 text-white hover:bg-teal-700 hover:scale-105' :  'bapos;bg-gray-700 hover:bg-gray-600'}`}
+                className={`w-full text-center font-bold py-3 rounded-lg transition-all duration-300 ease-in-out transform focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 ${tier.popular ? 'bg-teal-600 text-white hover:bg-teal-700 hover:scale-105' : 'bg-gray-700 hover:bg-gray-600'}`}
               >
                 {tier.cta}
               </a>
@@ -780,24 +780,24 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question:  'Hapos;How much does a website cost in the Philippines?',
+      question: 'How much does a website cost in the Philippines?',
       answer:
-        "Website costs vary based on complexity. Our  'Sapos;Standard' plan starts at P5,000 for setup + P500/month, which is ideal for a basic 5-page site. E-commerce and custom web applications will have different pricing. We offer detailed quotes after a consultation.",
+        "Website costs vary based on complexity. Our 'Standard' plan starts at P5,000 for setup + P500/month, which is ideal for a basic 5-page site. E-commerce and custom web applications will have different pricing. We offer detailed quotes after a consultation.",
     },
     {
-      question:  'Wapos;What is your web design process?',
+      question: 'What is your web design process?',
       answer:
-         'Oapos;Our process is collaborative. We start with a discovery call to understand your goals, followed by UI/UX design and mockups. Once the design is approved, we move to development, testing, and finally, launch. We keep you updated at every stage.',
+        'Our process is collaborative. We start with a discovery call to understand your goals, followed by UI/UX design and mockups. Once the design is approved, we move to development, testing, and finally, launch. We keep you updated at every stage.',
     },
     {
-      question:  'Dapos;Do you offer e-commerce website development?',
+      question: 'Do you offer e-commerce website development?',
       answer:
-         'Yapos;Yes, we specialize in e-commerce development. We can build powerful online stores or create completely custom e-commerce web applications to fit your business needs.',
+        'Yes, we specialize in e-commerce development. We can build powerful online stores or create completely custom e-commerce web applications to fit your business needs.',
     },
     {
-      question:  'Capos;Can you make my website appear on Google?',
+      question: 'Can you make my website appear on Google?',
       answer:
-         'Yapos;Yes, all our website packages include basic SEO (Search Engine Optimization) to help you get started. We ensure your site is built with SEO best practices to improve its visibility on search engines like Google.',
+        'Yes, all our website packages include basic SEO (Search Engine Optimization) to help you get started. We ensure your site is built with SEO best practices to improve its visibility on search engines like Google.',
     },
   ];
 
@@ -822,11 +822,11 @@ const FAQSection = () => {
                   {faq.question}
                 </h3>
                 <ChevronDown
-                  className={`w-6 h-6 text-teal-400 transition-transform duration-300 ${openIndex === index ?  'rapos;rotate-180' : ''}`}
+                  className={`w-6 h-6 text-teal-400 transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}
                 />
               </button>
               <div
-                className={`transition-all duration-300 ease-in-out grid ${openIndex === index ?  'gapos;grid-rows-[1fr]' :  'gapos;grid-rows-[0fr]'}`}
+                className={`transition-all duration-300 ease-in-out grid ${openIndex === index ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}
               >
                 <div className="overflow-hidden">
                   <p className="px-6 pb-6 text-gray-300">{faq.answer}</p>
@@ -848,8 +848,8 @@ const ContactSection = () => (
       </h2>
       <span className="block w-20 h-1 bg-teal-500 rounded-full mx-auto mb-10"></span>
       <p className="text-gray-300 text-lg mb-8">
-        Let's connect. Whether you have a question or a project proposal,
-        I&aposm here to help you build the future of your business.
+        Let's connect. Whether you have a question or a project proposal, I'm
+        here to help you build the future of your business.
       </p>
       <a
         href="mailto:josiah@weblitzstack.com"
@@ -865,35 +865,35 @@ const ContactSection = () => (
 export default function Home() {
   const yourProjects = [
     {
-      title:  'Wapos;WeblitzStack Instant Quoter',
+      title: 'WeblitzStack Instant Quoter',
       description:
-         'Aapos;An online tool for getting instant website quotations, streamlining the initial client consultation process.',
+        'An online tool for getting instant website quotations, streamlining the initial client consultation process.',
       imageUrl: '/launchweblitz.jpg',
-      techStack: [['Napos;Next.js',  'Rapos;React',  'Tapos;Tailwind CSS',  'Zapos;Zustand',  'Vapos;Vercel'],
-      liveUrl:  'hapos;https://launch.weblitzstack.com',
+      techStack: ['Next.js', 'React', 'Tailwind CSS', 'Zustand', 'Vercel'],
+      liveUrl: 'https://launch.weblitzstack.com',
     },
     {
-      title:  'Capos;Casa Brillantes Airbnb',
+      title: 'Casa Brillantes Airbnb',
       description:
-         'Aapos;A website for an Airbnb property in Subic, Zambales. Currently under active development.',
+        'A website for an Airbnb property in Subic, Zambales. Currently under active development.',
       imageUrl: '/casabrillantes.jpg',
-      techStack: [['Napos;Next.js',  'Tapos;Tailwind CSS',  'Sapos;Supabase',  'Vapos;Vercel'],
-      liveUrl:  'hapos;https://casa-brillantes.vercel.app/',
+      techStack: ['Next.js', 'Tailwind CSS', 'Supabase', 'Vercel'],
+      liveUrl: 'https://casa-brillantes.vercel.app/',
     },
     {
-      title:  'Sapos;Subic Waterfront Resort Website',
+      title: 'Subic Waterfront Resort Website',
       description:
-         'Aapos;A visually striking resort website featuring a full-screen, scroll-snapping interface and a booking modal.',
+        'A visually striking resort website featuring a full-screen, scroll-snapping interface and a booking modal.',
       imageUrl: '/SubicWaterfrontHero.png',
-      techStack: [['Napos;Next.js',  'Tapos;TypeScript',  'Tapos;Tailwind CSS',  'Fapos;Framer Motion'],
+      techStack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
       liveUrl: '#',
     },
     {
-      title:  'Uapos;Upwork-Style Sales Landing Page',
+      title: 'Upwork-Style Sales Landing Page',
       description:
-         'Aapos;A comprehensive sales page designed to convert, featuring multiple interactive sections and animations.',
+        'A comprehensive sales page designed to convert, featuring multiple interactive sections and animations.',
       imageUrl: '/Upwork.png',
-      techStack: [['Hapos;HTML5',  'Capos;CSS3',  'Japos;JavaScript',  'Sapos;SEO'],
+      techStack: ['HTML5', 'CSS3', 'JavaScript', 'SEO'],
       liveUrl: '/upwork-sample',
     },
   ];

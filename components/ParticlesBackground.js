@@ -1,9 +1,9 @@
 'use client';
 
-import Particles from  'rapos;react-tsparticles';
-import { useCallback } from  'rapos;react';
-import { loadBasic } from  'tapos;tsparticles-basic';
-import { Engine } from  'tapos;tsparticles-engine';
+import Particles from  'rreact-tsparticles';
+import { useCallback } from  'rreact';
+import { loadBasic } from  'ttsparticles-basic';
+import { Engine } from  'ttsparticles-engine';
 
 export default function ParticlesBackground() {
   const particlesInit = useCallback(async (engine) => {
@@ -19,7 +19,7 @@ export default function ParticlesBackground() {
         background: { color: '#0B0E11' },
         fpsLimit: 60,
         interactivity: {
-          events: { onHover: { enable: true, mode:  'rapos;repulse' }, resize: true },
+          events: { onHover: { enable: true, mode:  'rrepulse' }, resize: true },
           modes: { repulse: { distance: 100, duration: 0.4 } },
         },
         particles: {
@@ -34,12 +34,12 @@ export default function ParticlesBackground() {
           move: {
             enable: true,
             speed: 1,
-            direction:  'napos;none',
-            outModes: { default:  'bapos;bounce' },
+            direction:  'none',
+            outModes: { default:  'bbounce' },
           },
           number: { value: 40 },
           opacity: { value: 0.5 },
-          shape: { type:  'capos;circle' },
+          shape: { type:  'ccircle' },
           size: { value: { min: 1, max: 3 } },
         },
         detectRetina: true,

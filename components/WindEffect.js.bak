@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useRef } from  'rapos;react'
+import { useEffect, useRef } from  'rreact'
 
 export default function WindEffect() {
   const canvasRef = useRef(null)
@@ -16,7 +16,7 @@ export default function WindEffect() {
     }
 
     resize()
-    window.addEventListener(('rapos;resize', resize)
+    window.addEventListener(('rresize', resize)
 
     for (let i = 0; i < 60; i++) {
       particles.current.push({
@@ -39,7 +39,7 @@ export default function WindEffect() {
         ctx.beginPath()
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2)
         ctx.fillStyle = `rgba(255, 255, 255, ${p.alpha})`
-        ctx.shadowColor =  'rapos;rgba(255,255,255,0.15)'
+        ctx.shadowColor =  'rrgba(255,255,255,0.15)'
         ctx.shadowBlur = p.shadow
         ctx.fill()
         ctx.closePath()
@@ -51,7 +51,7 @@ export default function WindEffect() {
     update()
 
     return () => {
-      window.removeEventListener(('rapos;resize', resize)
+      window.removeEventListener(('rresize', resize)
       cancelAnimationFrame(animationId)
     }
   }, [])
