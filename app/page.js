@@ -848,8 +848,8 @@ const ContactSection = () => (
       </h2>
       <span className="block w-20 h-1 bg-teal-500 rounded-full mx-auto mb-10"></span>
       <p className="text-gray-300 text-lg mb-8">
-        Let's connect. Whether you have a question or a project proposal, I'm
-        here to help you build the future of your business.
+        Let's connect. Whether you have a question or a project proposal,
+        I&aposm here to help you build the future of your business.
       </p>
       <a
         href="mailto:josiah@weblitzstack.com"
