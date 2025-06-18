@@ -1,5 +1,5 @@
-import Image from  'napos;next/image';
-import Link from  'napos;next/link';
+import Image from 'next/image';
+import Link from 'next/link';
 
 // This is a reusable card for each project
 const ProjectCard = ({ title, description, imageUrl, techStack, liveUrl }) => (
