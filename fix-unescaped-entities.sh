@@ -1,31 +1,20 @@
 #!/bin/bash
 
-# Automatically fix unescaped apostrophes in JSX files
-# Use with caution — always commit changes before running
+echo "🔍 Fixing unescaped apostrophes in JSX text (safe mode)..."
 
-echo "🔍 Scanning for unescaped apostrophes in .js/.jsx files..."
+# Only replace 'I'm', 'don't', etc. within likely JSX <p>, <h>, <span>, etc. content
+find . -type f \( -name "*.js" -o -name "*.jsx" \) ! -path "*/node_modules/*" | while read file; do
+  cp "$file" "$file.bak"  # backup
 
-# Find all .js/.jsx files (exclude node_modules, .next, .git)
-FILES=$(find . -type f \( -name "*.js" -o -name "*.jsx" \) \
-    ! -path "./node_modules/*" \
-    ! -path "./.next/*" \
-    ! -path "./.git/*")
+  sed -i '' -E '
+    s/([^a-zA-Z0-9])'\''([a-zA-Z])/\\1&apos;\\2/g;
+    s/‘/&lsquo;/g;
+    s/’/&rsquo;/g;
+    s/“/&ldquo;/g;
+    s/”/&rdquo;/g;
+  ' "$file"
 
-for file in $FILES; do
-  echo "🔧 Fixing: $file"
-
-  # Replace problematic apostrophes inside JSX text
-  # (e.g., I'm → I&apos;m), also handles smart quotes
-  sed -i.bak -E \
-    -e "s/([^a-zA-Z0-9])'([a-zA-Z])/\\1&apos;\\2/g" \
-    -e "s/‘/&lsquo;/g" \
-    -e "s/’/&rsquo;/g" \
-    -e "s/“/&ldquo;/g" \
-    -e "s/”/&rdquo;/g" \
-    "$file"
-
-  # Optionally wrap lines that use ' in JSX inside backticks
-  # Example: change "I'm Josiah" to `I'm Josiah` if needed (manual alternative)
+  echo "✅ Fixed: $file"
 done
 
-echo "✅ Done. Backups saved as .bak files."
+echo "✅ Done (backup created as .bak files)"

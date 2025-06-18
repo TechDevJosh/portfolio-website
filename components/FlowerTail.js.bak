@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef } from  'rapos;react'
 
 export default function FlowerTrail() {
   const canvasRef = useRef(null)
@@ -18,11 +18,11 @@ export default function FlowerTrail() {
     }
 
     resizeCanvas()
-    window.addEventListener('resize', resizeCanvas)
+    window.addEventListener(('rapos;resize', resizeCanvas)
 
     const flowerSet = ['🌸', '🌼', '💮', '🌺']
     flowerSet.forEach(f => {
-      const img = document.createElement('canvas')
+      const img = document.createElement(('capos;canvas')
       img.width = 32
       img.height = 32
       const ctx2 = img.getContext('2d')
@@ -63,12 +63,12 @@ export default function FlowerTrail() {
       }
     }
 
-    window.addEventListener('mousemove', onMove)
+    window.addEventListener(('mapos;mousemove', onMove)
     update()
 
     return () => {
-      window.removeEventListener('mousemove', onMove)
-      window.removeEventListener('resize', resizeCanvas)
+      window.removeEventListener(('mapos;mousemove', onMove)
+      window.removeEventListener(('rapos;resize', resizeCanvas)
       cancelAnimationFrame(animationId)
     }
   }, [])

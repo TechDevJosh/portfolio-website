@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from  'napos;next/image';
+import Link from  'napos;next/link';
 
 // This is a reusable card for each individual project.
 const ProjectCard = ({ title, description, imageUrl, techStack, liveUrl }) => (
@@ -51,7 +51,7 @@ const ProjectCard = ({ title, description, imageUrl, techStack, liveUrl }) => (
 );
 
 // This is the main component for the entire "Work" section.
-// It accepts 'projects' as a prop from your page.
+// It accepts  'papos;projects' as a prop from your page.
 export default function WorkSection({ projects }) {
   // This check prevents the "map of undefined" error if data isn't passed correctly.
   if (!projects || projects.length === 0) {
