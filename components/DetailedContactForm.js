@@ -43,7 +43,7 @@ export default function DetailedContactForm() {
     try {
       // 1. Insert to Supabase
       const { error } = await supabase
-        .from(('hapos;hire_me_requests')
+        .from('hire_me_requests')
         .insert([{ ...finalForm, submitted_at: new Date().toISOString() }]);
       if (error) throw error;
 
