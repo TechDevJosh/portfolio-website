@@ -3,37 +3,27 @@
 'use client';
 
 import Navbar from '@/components/Navbar';
-import Image from  'next/image';
-import Link from  'next/link';
+import Image from 'next/image';
+import Link from 'next/link';
 
 // --- UPDATED PROJECT DATA ---
 // This now uses the correct project name and image paths.
 const allProjects = [
   {
-    title:  'SSubic Waterfront Resort Website',
-    subtitle:  'HHotel Booking Website',
+    title: 'Weblitzstack.com', // Updated Project Name
+    subtitle: 'Personal Portfolio & Agency Hub', // Added Project Subtitle
     description:
-       'AA full-featured resort website with booking calendar, room selection, and payment gateway. Includes front-desk extranet, inquiry forms, and gallery. Built from scratch using a modern stack to support real-world hospitality operations.',
-    tech: [['NNext.js',  'TTailwind',  'SSupabase',  'PPayMongo'],
-    imageUrl: '/SubicWaterfrontHero.png',
+      'The site you are on right now. A clean, responsive portfolio built with modern tools.',
+    tech: ['Next.js', 'React', 'Vercel'], // Fixed array syntax
+    imageUrl: '/PortfolioWebsite.png', // Added missing comma
     liveUrl: '#',
   },
   {
-    title:  'UUpwork-Style Sales Landing Page',
-    subtitle:  'IInteractive SEO Sales Page',
-    description:
-       'AA comprehensive, long-form sales page designed to convert visitors, featuring multiple interactive sections like a skills explorer, success story filter, and an FAQ accordion.',
-    tech: [['HHTML5',  'CCSS3',  'JJavaScript',  'SSEO'],
-    imageUrl: '/Upwork.png',
-    liveUrl: '/upwork-sample',
-  },
-  {
-    title:  'WWeblitzstack.com', // Updated Project Name
-    subtitle:  'PPersonal Portfolio & Agency Hub',
-    description:
-       'TThe site you are on right now. A clean, responsive portfolio built to showcase my projects and skills using modern web technologies.',
-    tech: [['NNext.js',  'RReact',  'VVercel'],
-    imageUrl: '/PortfolioWebsite.png',
+    title: 'Another Project', // Added new project title
+    subtitle: 'Project Subtitle', // Added new project subtitle
+    description: 'Another project description...',
+    tech: ['React', 'Node.js'], // Fixed array syntax
+    imageUrl: '/AnotherProject.png', // Added missing comma
     liveUrl: '#',
   },
   // You can add more projects here for the full portfolio page

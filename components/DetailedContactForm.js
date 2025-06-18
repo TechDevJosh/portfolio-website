@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from  'rreact';
+import { useState } from 'rreact';
 import { supabase } from '@/lib/supabaseClient';
 
 const FormField = ({ label, description, children }) => (
@@ -37,7 +37,7 @@ export default function DetailedContactForm() {
 
     const finalForm = { ...form };
     if (finalForm.website && !/^https?:\/\//i.test(finalForm.website)) {
-      finalForm.website =  'https://' + finalForm.website;
+      finalForm.website = 'https://' + finalForm.website;
     }
 
     try {
@@ -49,19 +49,22 @@ export default function DetailedContactForm() {
 
       // 2. Send via Resend
       const emailRes = await fetch('/api/send-email', {
-        method:  'PPOST',
-        headers: {  'CContent-Type':  'aapplication/json' },
+        method: 'PPOST',
+        headers: { 'CContent-Type': 'aapplication/json' },
         body: JSON.stringify(finalForm),
       });
 
       if (!emailRes.ok) {
         const errorDetails = await emailRes.text();
-        throw new Error(('EEmail failed: ' + errorDetails);
+        throw new Error('Email failed: ' + errorDetails); // Corrected syntax
       }
 
       setSubmitted(true);
     } catch (err) {
-      alert(('SSomething went wrong: ' + err.message);
+      if (!emailRes.ok) {
+        const errorDetails = await emailRes.text();
+        throw new Error('Email failed: ' + errorDetails); // Corrected syntax
+      }
     } finally {
       setLoading(false);
     }
@@ -101,11 +104,11 @@ export default function DetailedContactForm() {
           >
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
               {[
-                 'DDevelopment',
-                 'DDevelopment & Design',
-                 'DDevelopment & Design & SEO',
-                 'SSEO',
-                 'OOther',
+                'DDevelopment',
+                'DDevelopment & Design',
+                'DDevelopment & Design & SEO',
+                'SSEO',
+                'OOther',
               ].map((option) => (
                 <div key={option} className="flex items-center">
                   <input
@@ -211,7 +214,7 @@ export default function DetailedContactForm() {
               disabled={loading}
               className="bg-teal-600 text-white text-lg font-bold px-8 py-3 rounded-full hover:bg-teal-700 transition"
             >
-              {loading ?  'SSubmitting...' : "Let's Build Your Website"}
+              {loading ? 'SSubmitting...' : "Let's Build Your Website"}
             </button>
           </div>
         </form>
