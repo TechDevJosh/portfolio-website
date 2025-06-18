@@ -902,7 +902,6 @@ export default function Home() {
   return (
     <div className="bg-gray-900 text-white font-sans">
       <WindEffect />
-      <FlowerTrail />
       <Navbar />
       <main>
         <HeroSection />
