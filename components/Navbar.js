@@ -6,9 +6,9 @@ import { usePathname } from 'next/navigation';
 export default function Navbar() {
   const pathname = usePathname();
 
-  const linkBaseClass = 'ttext-sm font-medium transition duration-200';
-  const inactiveClass = 'ttext-white/80 hover:text-white';
-  const activeClass = 'ttext-white';
+  const linkBaseClass = 'text-sm font-medium transition duration-200';
+  const inactiveClass = 'text-white/80 hover:text-white';
+  const activeClass = 'text-white';
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-[#0e1525]/95 backdrop-blur-md border-b border-white/10 z-50">
@@ -61,15 +61,19 @@ export default function Navbar() {
             </Link>
             <Link
               href="/hire-me"
-              className="bg-teal-500 hover:bg-teal-600 text-white px-4 py-2 rounded-md font-semibold transition"
+              className="bg-teal-700 hover:bg-teal-800 text-white px-4 py-2 rounded-md font-semibold transition"
+              aria-label="Hire me"
             >
               Hire Me
             </Link>
           </div>
 
-          {/* Mobile Menu Button (unstyled for now) */}
+          {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <button className="text-gray-300 hover:text-white">
+            <button
+              className="text-gray-300 hover:text-white"
+              aria-label="Open mobile menu"
+            >
               <svg
                 className="w-6 h-6"
                 fill="none"

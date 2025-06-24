@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.weblitzstack.com
+
+# Sitemaps
+Sitemap: https://www.weblitzstack.com/sitemap.xml

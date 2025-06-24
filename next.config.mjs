@@ -8,7 +8,6 @@ const nextConfig = {
         port: '',
         pathname: '/**',
       },
-      // This object was added to allow images from placehold.co
       {
         protocol: 'https',
         hostname: 'placehold.co',
@@ -16,7 +15,20 @@ const nextConfig = {
         pathname: '/**',
       },
     ],
+    domains: ['cdn.jsdelivr.net'],
   },
 };
+
+// Add this function outside the nextConfig object
+export async function redirects() {
+  return [
+    {
+      source: '/',
+      has: [{ type: 'host', value: 'weblitzstack.com' }],
+      destination: 'https://www.weblitzstack.com',
+      permanent: true,
+    },
+  ];
+}
 
 export default nextConfig;

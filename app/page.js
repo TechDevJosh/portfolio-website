@@ -6,35 +6,25 @@ import Link from 'next/link';
 import WindEffect from '../components/WindEffect';
 
 /*
-  IMPORTANT SEO & METADATA NOTES:
-  To finalize the site's polish and ensure it looks great when shared online,
-  please update your `app/layout.js` file with the following metadata.
+  IMPORTANT CONFIGURATION NOTES:
+  To prevent runtime errors with external images, you need to create a `next.config.js`
+  file in the ROOT of your project (not in the app folder) and add the image hostname
+  permissions there.
 
-  1. In your `app` directory, open `layout.js`.
-  2. Replace the existing `metadata` export with this:
+  Your `next.config.js` file should look like this:
 
-  // --- Start of code for app/layout.js ---
-  export const metadata = {
-    title: 'Expert Web Design & Development in the Philippines | WeblitzStack',
-    description: 'WeblitzStack offers custom web design, e-commerce solutions, and web application development for businesses in Olongapo and the Philippines. Get a quote today!',
-    openGraph: {
-      title: 'Expert Web Design & Development in the Philippines | WeblitzStack',
-      description: 'High-performance, lead-generating websites for businesses in Olongapo and beyond.',
-      url: 'https://weblitzstack.com',
-      siteName: 'WeblitzStack',
-      images: [
-        {
-          url: 'https://weblitzstack.com/og-image.jpg', // Replace with your actual OG image URL
-          width: 1200,
-          height: 630,
-        },
-      ],
-      locale: 'en_US',
-      type: 'website',
-    },
-  };
-  // --- End of code for app/layout.js ---
-*/
+  /** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      { protocol: 'https', hostname: 'cdn.jsdelivr.net' },
+      { protocol: 'https', hostname: 'upload.wikimedia.org' },
+      { protocol: 'https', hostname: 'cdn.worldvectorlogo.com' },
+      { protocol: 'https', hostname: 'seeklogo.com' },
+      { protocol: 'https', hostname: 'resend.com' },
+    ],
+  },
+};
 
 // --- SVG Icon Components ---
 const CheckCircle = ({ className }) => (
@@ -165,12 +155,16 @@ const Twitter = ({ size = 24, className }) => (
 const Navbar = () => (
   <header className="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-sm border-b border-gray-700/50">
     <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-      <Link
-        href="/"
-        className="text-2xl font-bold bg-gradient-to-r from-teal-400 to-lime-400 text-transparent bg-clip-text"
-      >
-        WeblitzStack
+      <Link href="/" aria-label="WeblitzStack homepage">
+        <Image
+          src="/weblitzstack logo.png"
+          alt="WeblitzStack Logo"
+          width={160}
+          height={40}
+          priority
+        />
       </Link>
+
       <nav className="hidden md:flex items-center space-x-6">
         <Link
           href="#services"
@@ -232,11 +226,7 @@ const Navbar = () => (
 );
 
 const Footer = () => {
-  const [year, setYear] = useState(new Date().getFullYear());
-
-  useEffect(() => {
-    setYear(new Date().getFullYear());
-  }, []);
+  const year = new Date().getFullYear();
 
   return (
     <footer className="bg-gray-900 border-t border-gray-800 py-12">
@@ -507,55 +497,104 @@ const AboutSection = () => (
   </section>
 );
 
-const WorkSection = ({ projects }) => (
-  <section id="work" className="py-20 bg-gray-900">
-    <div className="container mx-auto px-6">
-      <h2 className="text-[clamp(2rem,6vw,3rem)] font-bold text-center mb-4">
-        Our Work
-      </h2>
-      <span className="block w-20 h-1 bg-teal-500 rounded-full mx-auto mb-12"></span>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            className="bg-gray-800 rounded-lg overflow-hidden group transform transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-teal-900/40"
-          >
-            <Image
-              src={project.imageUrl}
-              alt={project.title}
-              width={600}
-              height={400}
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-6">
-              <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-              <p className="text-gray-400 mb-4">{project.description}</p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.techStack.map((tech) => (
-                  <span
-                    key={tech}
-                    className="bg-gray-700 text-teal-400 text-xs font-semibold px-2.5 py-1 rounded-full"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-teal-400 hover:text-teal-300 font-semibold inline-flex items-center group-hover:text-lime-400 transition-colors duration-300"
-              >
-                View Project{' '}
-                <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </a>
-            </div>
-          </div>
-        ))}
+const WorkSection = ({ projects }) => {
+  const techLogos = {
+    'Next.js':
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg',
+    React:
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
+    'Tailwind CSS':
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
+    Vercel:
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg',
+    Resend: '/resend.png',
+    Zustand: 'https://cdn.jsdelivr.net/gh/pmndrs/zustand/docs/public/logo.png',
+    Supabase:
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg',
+    TypeScript:
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg',
+    'Framer Motion':
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg',
+    HTML5:
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg',
+    CSS3: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg',
+    JavaScript:
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
+  };
+
+  const TechLogo = ({ tech }) => {
+    const logoUrl = techLogos[tech];
+    if (!logoUrl) {
+      return (
+        <span className="bg-gray-700 text-teal-400 text-xs font-semibold px-2.5 py-1 rounded-full flex items-center">
+          {tech}
+        </span>
+      );
+    }
+    return (
+      <div
+        className="h-8 w-8 bg-gray-700 rounded-full p-1.5 flex items-center justify-center ring-1 ring-gray-600"
+        title={tech}
+      >
+        <Image
+          src={logoUrl}
+          alt={tech}
+          width={24}
+          height={24}
+          className="object-contain"
+        />
       </div>
-    </div>
-  </section>
-);
+    );
+  };
+
+  return (
+    <section id="work" className="py-20 bg-gray-900">
+      <div className="container mx-auto px-6">
+        <h2 className="text-[clamp(2rem,6vw,3rem)] font-bold text-center mb-4">
+          Our Work
+        </h2>
+        <span className="block w-20 h-1 bg-teal-500 rounded-full mx-auto mb-12"></span>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="bg-gray-800 rounded-lg overflow-hidden group transform transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-teal-900/40"
+            >
+              <Image
+                src={project.imageUrl}
+                alt={project.title}
+                width={600}
+                height={400}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                <p className="text-gray-400 mb-4">{project.description}</p>
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="text-xs font-semibold uppercase text-gray-400 mr-2">
+                    Built with:
+                  </span>
+                  {project.techStack.map((tech) => (
+                    <TechLogo key={tech} tech={tech} />
+                  ))}
+                </div>
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-teal-400 hover:text-teal-300 font-semibold inline-flex items-center group-hover:text-lime-400 transition-colors duration-300"
+                >
+                  View Project{' '}
+                  <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
 
 const PricingSection = () => {
   const [billingCycle, setBillingCycle] = useState('monthly');
@@ -862,15 +901,80 @@ const ContactSection = () => (
   </section>
 );
 
+// --- New HomePage Hero Section ---
+function HomeHero() {
+  return (
+    <section
+      id="home"
+      className="flex flex-col items-center justify-center text-center px-4 py-20 pt-32 bg-[#0e1525]"
+    >
+      <Image
+        src="/weblitzstack logo.png"
+        alt="WeblitzStack Logo"
+        width={200}
+        height={60}
+        priority
+      />
+      <h1 className="text-4xl md:text-6xl font-bold mt-6 leading-tight">
+        Build blazing-fast full-stack apps
+        <br />
+        with AI-First Automation
+      </h1>
+      <p className="text-lg md:text-xl text-white/80 mt-4 max-w-2xl">
+        WeblitzStack helps creators and entrepreneurs launch professional-grade
+        websites powered by automation, instant forms, and full-stack
+        intelligence.
+      </p>
+      <div className="mt-8 flex flex-col sm:flex-row gap-4">
+        <Link
+          href="/hire-me"
+          className="bg-teal-700 hover:bg-teal-800 text-white font-semibold px-6 py-3 rounded-md transition"
+          aria-label="Hire Josiah for a custom website"
+        >
+          Hire Me
+        </Link>
+        <Link
+          href="/#work"
+          className="border border-white/40 hover:border-white text-white px-6 py-3 rounded-md transition"
+          aria-label="See example projects"
+        >
+          View Work
+        </Link>
+      </div>
+    </section>
+  );
+}
+
 // --- Main Page Component ---
 export default function Home() {
   const yourProjects = [
+    {
+      title: 'WeblitzStack Portfolio',
+      description:
+        'The very website you are on. A polished, SEO-optimized portfolio built to showcase services and projects.',
+      imageUrl: '/PortfolioWebsite.png',
+      techStack: [
+        'Next.js',
+        'React',
+        'Tailwind CSS',
+        'Framer Motion',
+        'Resend',
+      ],
+      liveUrl: '#',
+    },
     {
       title: 'WeblitzStack Instant Quoter',
       description:
         'An online tool for getting instant website quotations, streamlining the initial client consultation process.',
       imageUrl: '/launchweblitz.jpg',
-      techStack: ['Next.js', 'React', 'Tailwind CSS', 'Zustand', 'Vercel'],
+      techStack: [
+        'Next.js',
+        'React',
+        'Tailwind CSS',
+        'Zustand',
+        'Vercel',
+        'Resend',
+      ],
       liveUrl: 'https://launch.weblitzstack.com',
     },
     {
@@ -904,7 +1008,7 @@ export default function Home() {
       <WindEffect />
       <Navbar />
       <main>
-        <HeroSection />
+        <HomeHero />
         <ServicesSection />
         <WorkSection projects={yourProjects} />
         <ModernStacksSection />

@@ -1,4 +1,4 @@
-// components/Footer.js
+import { MdEmail } from 'react-icons/md';
 
 export default function Footer() {
   return (
@@ -7,7 +7,17 @@ export default function Footer() {
         <p>
           102 St. James Subd., Brgy. Calapacuan, Subic, Zambales, Philippines
         </p>
+        <p className="flex justify-center items-center gap-2">
+          <a
+            href="mailto:josiah@weblitzstack.com"
+            aria-label="Email josiah@weblitzstack.com"
+            className="hover:text-white"
+          >
+            <MdEmail size={20} />
+          </a>
+        </p>
         <p>&copy; 2025 weblitzstack.com</p>
+        {/* If you ever add social or legal links here, make sure they have text or aria-labels for accessibility. */}
       </div>
     </footer>
   );
