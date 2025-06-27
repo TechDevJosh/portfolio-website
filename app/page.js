@@ -4,8 +4,6 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import WindEffect from '../components/WindEffect';
-
-<meta name="facebook-domain-verification" content="q08xi28ttzffpb8v4nyh7fqhrmmy4l" />
 /*
   IMPORTANT CONFIGURATION NOTES:
   To prevent runtime errors with external images, you need to create a `next.config.js`
@@ -307,6 +305,7 @@ const HeroSection = () => (
           className="inline-block bg-teal-600 text-white text-lg font-bold px-8 py-4 rounded-full hover:bg-teal-700 transition-all duration-300 ease-in-out transform hover:scale-105 shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 focus-visible:ring-teal-400"
         >
           View Our Plans
+            <meta name="facebook-domain-verification" content="q08xi28ttzffpb8v4nyh7fqhrmmy4l" />
         </Link>
       </div>
     </div>
