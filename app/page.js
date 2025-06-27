@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import WindEffect from '../components/WindEffect';
 
+<meta name="facebook-domain-verification" content="q08xi28ttzffpb8v4nyh7fqhrmmy4l" />
 /*
   IMPORTANT CONFIGURATION NOTES:
   To prevent runtime errors with external images, you need to create a `next.config.js`
